@@ -119,10 +119,30 @@ npm run dev
 
 ### Git 分支
 
-- `feature/ui` — 页面与交互（B）
-- `feature/api` — 后端接口（A）
-- `feature/ai` — AI 服务（A）
-- `feature/posture` — 姿态识别（A）
+已在本地与远程创建并跟踪以下分支（详见 [docs/BRANCHING.md](docs/BRANCHING.md)）：
+
+| 分支 | 负责人 | 用途 |
+|------|--------|------|
+| `feature/ui` | B | 页面、组件、动画 |
+| `feature/api` | A | 后端接口、数据库、Supabase |
+| `feature/ai` | A | AI 客户端、Prompt、`/api/ai/*` |
+| `feature/posture` | A | MediaPipe、姿态规则、`/api/posture` |
+
+**A 开始写接口时：**
+
+```bash
+git checkout feature/api
+git pull origin feature/api
+```
+
+**B 开始写页面时：**
+
+```bash
+git checkout feature/ui
+git pull origin feature/ui
+```
+
+合并一律通过 GitHub Pull Request 进入 `main`，不要在 `main` 上直接开发功能。
 
 ### Commit 示例
 

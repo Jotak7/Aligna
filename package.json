@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "branch:api": "git checkout feature/api",
+    "branch:ai": "git checkout feature/ai",
+    "branch:posture": "git checkout feature/posture",
+    "branch:ui": "git checkout feature/ui",
+    "branch:main": "git checkout main"
   },
   "dependencies": {
     "next": "16.2.6",
